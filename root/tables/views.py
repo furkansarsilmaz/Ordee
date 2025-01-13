@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def tables(request):
-    return HttpResponse('<h1> It is Tables </h1>')
+    return render(request,'tables/tables.html')
