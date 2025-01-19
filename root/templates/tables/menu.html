@@ -3,11 +3,21 @@
 
 {% block content %}
     <div class="container text-center">
-        <div class="row mt-4 ">
                 {% for product in products %}
-                    <h1> {{product.name}}</h1>
-                    <h2>{{product.price}}</h2>
+                    <div class="row mb-4 text-center">
+                        <div class="col-2">
+                            <h1> {{product.name}} </h1>
+                        </div>
+                        <div class="col-2">
+                            <h2> {{ product.price }}</h2>
+                        </div>
+                        <div class="col-2">
+                            <div class="btn btn-primary">+</div>
+                        </div>
+                        <div class="col-2">
+                            <div class="btn btn-primary">-</div>
+                        </div>
+                    </div>
                 {% endfor %}
-        </div>
     </div>
 {% endblock %}
