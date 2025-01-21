@@ -7,3 +7,10 @@ class Menu(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.price} $"
+    
+class Order(models.Model):
+    menu_item = models.ForeignKey(Menu,on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.menu_item.name} - {self.quantity}"
