@@ -1,12 +1,6 @@
 <header class="d-flex justify-content-center py-3">
     <ul class="nav nav-pills">
-      <li 
-        {% if request.path == ' ' %}
-          class="nav-item active"
-        {% else %}
-          class="nav-item"
-        {% endif %}
-      >
+      <li class = "nav-item {% if request.path == '' %} active {% endif %}">
         <a href="{% url 'Login' %}" class="nav-link">Login</a>
       </li>
       

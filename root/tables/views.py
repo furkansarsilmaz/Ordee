@@ -10,7 +10,13 @@ def tables(request):
 
 def menu(request, table_id):
     products = Menu.objects.all()
-    return render(request, 'tables/menu.html', {'products': products, 'table_id': table_id})
+    menu_items = Order.objects.all()
+    context = {
+        'products': products,
+        'table_id': table_id,
+        'menu_item': menu_items 
+    }
+    return render(request, 'tables/menu.html',context)
 
 def increase_order(request, menu_id):
     menu_item = get_object_or_404(Menu, id=menu_id)
