@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
-    <div class="row mt-1">
+    <div class="row mt-3">
         <div class="container text-center">
             <h1> Given Orders</h1>
-            <h2> Order-1</h2>
             {% for menu in menu_items %}
-                <div class="card" style="width: 18rem;">
+                <div class="card " style="width: 18rem;">
                     <div class="card-body">
+                        <h4> {{ menu.menu_item.name    }} </h5>
                         <h5> {{ menu.menu_item.price    }} </h5>
                     </div>
                 </div>
