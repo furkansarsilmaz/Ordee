@@ -1,4 +1,5 @@
 <header class="d-flex justify-content-center py-3">
+  <nav class="navbar bg-primary" data-bs-theme="dark">
     <ul class="nav nav-pills">
       <li class = "nav-item {% if request.path == '' %} active {% endif %}">
         <a href="{% url 'Login' %}" class="nav-link">Login</a>
@@ -15,7 +16,8 @@
       </li>
       
       <li class="nav-item">
-        <a href="#" class="nav-link">Orders</a>
+        <a href="{% url 'orders' %}" class="nav-link">Orders</a>
       </li>
     </ul>
+  </nav>
 </header>
